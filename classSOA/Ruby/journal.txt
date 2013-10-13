@@ -1,0 +1,79 @@
+tryruby.org
+
+9/30 
+
+# Basic objects 
+    
+       "String"                           Strings
+        4                                 Numbers
+        []                                array or collection
+        {}                                hash or dictionary: key and value
+
+
+
+  "   ".reverse (do not forget dot)
+
+  "   ".length
+
+
+# errors
+
+     40.reverse   (x)
+ 
+   =>40.to_s.reverse (o)
+
+   =>"04"
+
+# changes
+     
+     to_s  converts things to strings.
+     
+     to_i  converts things to intergers.(numbers.)
+  
+     to_a  converts things to arrays.
+
+ 
+     [    ]  (put in numbers)
+
+     [    ].max
+
+
+# variable         
+
+     ticket.[    ]
+   
+     ticket.sort (numbers are shown in order)
+
+
+10/8
+
+# symbol  :
+
+books["Gra¬vity's Rainb¬ow"]=:sple¬ndid
+=> books["Gra¬vity's Rainb¬ow"]
+=> :splendid
+
+ books["Gra¬vity's Rainb¬ow"]=:quit¬e_good
+=>books["Gra¬vity's Rainb¬ow"]
+=> :quite_good
+
+
+books.valu¬es.each {|r¬ate|rating¬s[rate]+=1¬}
+
+ 5.times{pr¬int"Odelay¬!"}
+=> "Odelay!Odelay!Odelay!Odelay!Odelay!"
+
+Challenge5
+Dir["/*.tx¬t"]
+=> ["/comics.txt"]
+The Dir[] method is like entries but you search for files with wildcard characters. Here, we see those square brackets again! Notice how they still mean, "I am looking for _____?"
+
+FileUtils.¬cp("/comic¬s.txt","/H¬ome/comics¬.txt")
+
+(check)
+ Dir["/Home¬/*.txt"]
+=> ["/Home/comics.txt"]
+
+File.¬mtime("/Ho¬me/comics.¬txt")
+=> 2013-10-07 03:12:08 +0000
+
