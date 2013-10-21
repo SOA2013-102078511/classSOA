@@ -16,7 +16,7 @@ def self.all_ratings ; %w[G PG PG-13 R NC-17] ; end #  shortcut: array of string
   end
   @@grandfathered_date = Date.parse('1 Nov 1968')
   def grandfathered? ; self.release_date >= @@grandfathered_date ; end
-
+end
 end
 
 
