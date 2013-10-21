@@ -28,3 +28,27 @@ Rails預設只有內建ERb和Builder這兩套樣板引擎，但要擴充非常�
 #Migrations（資料庫遷移）
 Migrations（資料庫遷移）可以讓你用 Ruby 程式來修改資料庫結構。相較於直接進資料庫系統使用 SQL 修改結構(例如使用 phpMyAdmin 工具來修改)，使用 Migrations 可以讓我們有記錄地進行資料庫修改，每次變更就是一筆 Migration 記錄。在沒有 Migration 之前，如果你手動修改了資料庫，那麼你就必須通知其他開發者也進行一樣的修改步驟。另外，在正式佈署的伺服器上，你也必須追蹤並執行同樣的變更才行。而這些步驟如果沒有記錄下來，就很容易出錯。
 Migrations 會自動追蹤哪些變更已經執行過了、那些還沒有，你只要新增 Migration 檔案，然後執行 rake db:migrate 就搞定了。它會自己搞清楚該跑哪些 migrations，如此所有的開發者和正式佈署的伺服器上，就可以輕易的同步最新的資料庫結構。另外一個優點是： Migration 是獨立於資料庫系統的，所以你不需要煩惱各種資料庫系統的語法差異，像是不同型態之類的。當然，如果要針對某個特定資料庫系統撰寫專屬功能的話，還是可以透過直接寫 SQL 的方式。
+
+
+10/20
+5.1
+Name有問題,但不能刪掉moviegoer,所以加上#,將它變成解釋,以後還有用處
+App/controller/application
+class ApplicationController < ActionController::Base
+
+#  before_filter :set_current_user
+
+#  protected # prevents method from being invoked by a route
+
+#  def set_current_user
+
+#    # we exploit the fact that find_by_id(nil) returns nil
+
+#    @current_user ||= Moviegoer.find_by_id(session[:user_id])
+
+#    redirect_to login_path and return unless @current_user
+
+#  end
+
+end
+
